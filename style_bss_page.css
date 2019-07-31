@@ -1,0 +1,27 @@
+body { margin: 0; font-size: 1.7vw; font-family: Georgia; color: grey }
+h1 { text-align: right; margin: 1.5% 3%; text-decoration-line: underline; font-size: initial } h1 a { color: grey }
+h2 { text-align: center; font-style: oblique; text-transform: uppercase; margin: 0; font-size: initial }
+h2:hover { cursor: pointer }
+#grid { display: none } 
+#grid span { padding-left:12%; font-size: 0.5em }
+section { display: flex; flex-wrap: wrap }
+.column:first-child { border-bottom: 0.4em solid lightgreen }
+.column { border: 2px dotted maroon; padding: 2%; margin: 1%; width: 18% }
+
+label { font-size: initial }
+input { width: 97%; opacity: 0.7; margin-bottom: 1.5em } input:hover { opacity: 1 }
+
+select { border-style: dotted; font-size: 0.8em; width: 15% }
+header > select { margin: 0 42% 2% }
+
+/* .submit { border-radius: 8px 0 8px 0; border-color: transparent; color: whitesmoke; height: 2em; width: 28% } */
+button { border-radius: 8px 0 8px 0; border-color: transparent; color: whitesmoke; height: 2em; width: 28% }
+.update { background-color: deeppink; cursor: pointer; }
+.add { background-color: cadetblue; cursor: pointer }	.add:last-child { display: none }
+.del { background-color: coral; cursor: pointer; }
+
+.buttons { margin-left: 0.5vw; display: none }
+.column:first-child > .buttons { padding-top: 32% }
+input[name=id] { width: 12%; margin-bottom: 1% }
+
+footer { font-style: italic; text-align: right; padding: 5%; font-size: 0.7em }

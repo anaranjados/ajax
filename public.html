@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Approval work of Proenza for BSS</title>
+	<meta name="author" content="Proenza A">
+	<link rel="stylesheet" type="text/css" href="style_bss_page.css">
+	<meta charset="UTF-8">
+</head>
+
+<body>
+<header>
+	<h1><a href="http://www.bssys.com" target="_blank">BSS</a></h1>
+	<h2>Контрагенты и счета</h2><br/>
+	<select>
+		<option>Click the header ⇮</option>
+	</select>
+</header>
+
+<main id="grid">
+<section>
+	<div class="column">
+		<label>Контрагент * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#</label>
+			<input type="text" name="id" placeholder="id" readonly><br/>
+
+		<input type="text" name="cust_name" placeholder="наименование"><br/>
+
+		<label>ИНН *</label><br/>
+		<input type="text" name="inn" placeholder="12 цифр" /><br/>
+
+		<label>Адрес</label><br/>
+		<input type="text" name="address" placeholder="введите кириллицей" /><br/>
+		<div class="buttons">
+			<button class="update" onmousedown="updateActC()">Save</button>&nbsp;&nbsp;
+			<button class="add" onmousedown="addActC()">New</button>&nbsp;&nbsp;
+			<button class="del" onmousedown="delActC()">Delete</button>
+		</div>
+	</div>
+
+	<div class="column account">
+		<label>Счёт *</label><br/>
+		<input type="text" name="acc_number" placeholder="номер"><br/>
+
+		<label>Название счёта</label><br/>
+		<input type="text" name="acc_name" placeholder="введите кириллицей" /><br/>
+
+		<label>БИК *</label><br/>
+		<input type="text" name="bik" placeholder="9 цифр" /><br/>
+
+		<label>Баланс *</label><br/>
+		<input type="text" name="balance" placeholder="*.**" /><br/>
+
+		<div class="buttons">
+			<button class="update">Save</button>&nbsp;&nbsp;
+			<button class="add">New</button>&nbsp;&nbsp;
+			<button class="del">Delete</button>
+		</div>
+	</div>
+</section>
+<!--span>Marked with *, should be filled obligatory.</span-->
+</main>
+
+<footer>
+	Some copyright ©
+</footer>
+
+<script src="a_script.js" defer></script>
+</body>
+</html>
