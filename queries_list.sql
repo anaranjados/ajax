@@ -1,5 +1,3 @@
-mysql -u root -p
-
 create database Grids;
 use Grids;
 create table Customer(
@@ -41,45 +39,3 @@ insert into Account (cust_id, acc_number, acc_name, bik, balance) VALUES
                         (2, 8645637, 'Somebody calling K', 108568346, 8945.34);
 insert into Account (cust_id, acc_number, acc_name, bik, balance) VALUES
                         (3, 33546347234465754, 'Banco nacional', 46, 6548945.12);
-
-
-/*
-Строка содержит только символы и числа     ^[a-zA-Z\d]*$
-IF(table.field REGEXP '[абвгдеёжзийклмнопрстуфхцчшщъыьэюяАБВГДЗЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ]', '', table.field) as field
-
-https://stackoverflow.com/questions/27640566/how-to-update-or-remove-all-special-characters-from-a-varchar-column
-
-create function dbo.AnyNonCyril (@str varchar(256)) returns varchar(256) with schemabinding
-    begin
-       if @str is null
-       	return null
-       declare @str2 varchar(256)
-       set @str2 = ''
-       declare @len int
-       set @len = len(@str)
-       declare @pos int
-       set @pos = 1
-       while @pos <= @len begin
-          declare @c int
-          set @c = ascii(substring(@str, @pos, 1))
-          if @c between 33 and 126
-             set @str2 = @str2 + char(@c)
-          set @pos = @pos + 1
-          end
-       if len(@str2) = 0
-       	return null
-       return @str2
-	end;
-
-update [][]
-SET name = (
-           CASE WHEN name LIKE '%[^a-zA-Z0-9]%' 
-                           THEN (SELECT dbo.AnyNonCyril(name))
-                      ELSE [name]
-                      END
-            );
-
-
-http://www.asciitable.com/
-33-126
-*/
