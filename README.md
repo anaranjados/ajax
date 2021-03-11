@@ -1,4 +1,4 @@
-# Web_DB
+# Backend php _ Frontend js
 Stack [php, sql, JS, html, css]
 
 
